@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\MyPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +15,6 @@ Auth::routes();
 
 Route::get('/top', function () {return view('/top');});
 Route::get('/thanks', function () {return view('/auth.thanks');});
-Route::get('/my_page', function () {return view('/my_page');});
 
 
 Route::group(['middleware' => 'guest'], function() {
@@ -27,3 +26,8 @@ Route::get('/', 'ShopController@index')->name('home.index');
 Route::get('/detail/{id}', 'ShopController@detail')->name('shop.detail');
 Route::get('/search', 'ShopController@search')->name('search');
 
+Route::get('/done', 'ReservationController@index')->name('done.index');
+Route::post('/reservations', 'ReservationController@store')->name('reservations.store');
+
+Route::get('/my_page', [MyPageController::class, 'myPage'])->name('my_page');
+Route::get('/my_page', 'MyPageController@index')->name('my_page.index');

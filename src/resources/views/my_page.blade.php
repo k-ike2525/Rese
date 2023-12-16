@@ -9,10 +9,21 @@
        <div class="item-name">予約状況</div>
     </div>
 
-    
+    <style>
+        .clock-icon, .fa-times-circle {
+            color: white;
+            font-size: 20px;
+            margin: 10px 15px 20px 10px; 
+        }
+    </style>
+
+
+
     <!--予約状況　コンテンツ　表示 -->
 <div class="item-detail">
-<div><p>予約１</p><p><span class="round_btn"></span></p></div>
+<div>
+    <i class="far fa-clock clock-icon">　予約１</i><i class="fas fa-times-circle"></i>
+</div>
     <table>
         <tr>
             <td><p>Shop</p></td>
