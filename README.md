@@ -76,8 +76,9 @@ php artisan migrate
 
 laravel 各データをインストール </br>
 $ php artisan storage:link　</br>
-補足：src/public/storage に strage エイリアス ファイルの確認
-　　　 img ディレクトリ内の画像を読み込みます。
+補足：
+src/public/storage に imgディレクトリ（画像５枚）また、　strage エイリアス ファイルの確認</br>
+img ディレクトリ内の画像を読み込みます。
 
 $ php artisan db:seed --class=GenreSeeder</br>
 $ php artisan db:seed --class=AreaSeeder</br>
