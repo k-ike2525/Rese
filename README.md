@@ -64,6 +64,7 @@ $ mv Atte XXX 　 </br>
 
 docker 構築 </br>
 $ docker-compose up -d --build </br>
+補足：実行できない場合は、Rese/docker/mysqlのdataディレクトリの中身ファイルををすべて削除して再度実行してください。
 $ code . </br>
 $ docker-compose exec php bash </br>
 
