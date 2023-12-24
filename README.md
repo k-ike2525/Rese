@@ -72,12 +72,12 @@ laravel パッケージをインストール </br>
 $ composer install </br>
 $ composer dump-autoload
 
-.env.example ファイルをインストール
-$ cp .env.example .env
-$ php artisan key:generate
+.env.example ファイルをインストール </br>
+$ cp .env.example .env　　　 </br>
+$ php artisan key:generate　　 </br>
 
 Rese 各テーブル取得　</br>
-php artisan migrate
+php artisan migrate </br>
 
 laravel 各データをインストール </br>
 $ php artisan storage:link　</br>
