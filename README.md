@@ -70,6 +70,9 @@ laravel パッケージをインストール </br>
 $ composer install </br>
 $ composer dump-autoload
 
+Rese 各テーブル取得　</br>
+php artisan migrate
+
 laravel 各データをインストール </br>
 $ php artisan storage:link
 補足：src/public/storage に strage エイリアス ファイルの確認
