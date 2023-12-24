@@ -67,7 +67,7 @@ $ code . </br>
 $ docker-compose exec php bash </br>
 
 laravel パッケージをインストール </br>
-$ composer install" </br>
+$ composer install </br>
 $ composer dump-autoload
 
 laravel 各データをインストール </br>
