@@ -75,13 +75,15 @@ $ composer dump-autoload
 .env.example ファイルをインストール </br>
 $ cp .env.example .env　　　 </br>
 $ php artisan key:generate　　 </br>
+補足：</br>
+実行できない場合は、envファイル作成　docker 構築を繰り返してください
 
 Rese 各テーブル取得　</br>
 php artisan migrate </br>
 
 laravel 各データをインストール </br>
 $ php artisan storage:link　</br>
-補足：
+補足：</br>
 src/public/storage に imgディレクトリ（画像５枚）また、　strage エイリアス ファイルの確認</br>
 img ディレクトリ内の画像を読み込みます。
 
