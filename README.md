@@ -57,7 +57,7 @@
 
 開発環境を GitHub からクローン　 </br>
 $ cd XXX 　 </br>
-$ git clone git@github.com:k-ike2525/Atte.git </br>　
+$ git clone git@github.com:k-ike2525/Rese.git </br>　
 $ mv Atte XXX 　 </br>
 「XXX」　は任意のディレクトリ名 </br>
 
