@@ -15,4 +15,9 @@ public function genre()
 {
     return $this->belongsTo(Genre::class);
 }
+
+public function favorites()
+    {
+        return $this->belongsToMany(User::class, 'favorites', 'shop_id', 'user_id')->withTimestamps();
+    }
 }

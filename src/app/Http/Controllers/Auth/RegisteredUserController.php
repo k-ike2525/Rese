@@ -31,8 +31,6 @@ class RegisteredUserController extends Controller
         return view('auth.register');
     }
 
-
-
     /**
      * ユーザ登録機能
      * @param array $data

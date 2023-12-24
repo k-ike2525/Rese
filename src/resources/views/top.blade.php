@@ -16,15 +16,6 @@
     <style>
     html, body {
         background-color: #fff;
-        color: #636b6f;
-        font-weight: 200;
-        height: 100vh;
-        margin: 0;
-    }
-
-    .site-width {
-        max-width: 1200px;
-        margin: 0 auto;
     }
 
     .position-ref {
@@ -52,23 +43,18 @@
         letter-spacing: .1rem;
     }
 
-    .m-b-md a{
-        margin-bottom: 30px;
-        text-decoration:none;
-    }
-
     .top-right.links {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 100px;
+        margin: 50px 10px 50px;
         width: 100%;
     }
 
     .top-right.links a {
         color: blue;
-        font-size: 30px;
+        font-size: 15px;
         margin: 10px 0;
         text-decoration: none;
         text-shadow: none;
@@ -80,7 +66,7 @@
         <!-- ロゴ -->
     <header>
       <div>
-        <h1><a href="{{ url('/') }}"><i class="fa-solid fa-rectangle-list"></i></a></h1>
+        <h1><a href="{{ url('/') }}"><i class="fa-solid fa-square-xmark"></i></a></h1>
 
     <body>
         <div  class="site-width">
@@ -110,7 +96,6 @@
                     @endauth
                 </div>
             @endif
-
         </div>
         </div>
     </body>

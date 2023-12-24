@@ -29,70 +29,78 @@
         @endif
     </div>
 
-        <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 
-    <!-- 予約　コンテンツ　-->
+<style>
+    .panel-list .top{
+        margin-left: 10px;
+        color: #fff;
+        font-size: 15px;
+    }
+</style>
+
+<!-- 予約　コンテンツ　-->
 <div class="site-form">
     <section id="main">
         <div class="panel-list">
-<form action="{{ route('reservations.store') }}" method="POST">
-    @csrf
-    <div class="panel-body">
-        <label for="date"></label>
-        <input type="date" id="date" name="date" required>
-    </div>
-    <div class="panel-body">
-        <label for="time"></label>
-        <select id="time" name="time" class="time" required>
-            @for ($i = 0; $i < 24; $i++)
-                @php
-                    $hour = sprintf('%02d', $i);
-                @endphp
-                <option value="{{ $hour }}:00">{{ $hour }}:00</option>
-            @endfor
-        </select>
-    </div>
-    <div class="panel-body">
-        <label for="num_people"></label>
-        <select id="num_people" name="num_people" class="num_people" required>
-            <script>
-                for (var i = 1; i <= 10; i++) {
-                    document.write("<option value='" + i + "'>" + i + " 人</option>");
-                }
-            </script>
-        </select>
-    </div>
+            <p class="top">予約</p>
 
- 
+                <form action="{{ route('reservations.store', ['shop_id' => $shop->id]) }}" method="POST">
+                    @csrf
+                    <div class="panel-body">
+                        <label for="date"></label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="panel-body">
+                        <label for="time"></label>
+                        <select id="time" name="time" class="time" required>
+                            @for ($i = 0; $i < 24; $i++)
+                                @php
+                                    $hour = sprintf('%02d', $i);
+                                @endphp
+                                <option value="{{ $hour }}:00">{{ $hour }}:00</option>
+                            @endfor
+                        </select>
+                    </div>
+                    <div class="panel-body">
+                        <label for="count"></label>
+                        <select id="count" name="count" class="count" required>
+                            <script>
+                                for (var i = 1; i <= 10; i++) {
+                                    document.write("<option value='" + i + "'>" + i + " 人</option>");
+                                }
+                            </script>
+                        </select>
+                    </div>
 
- <!-- 予約詳細の表示部分 -->
-                <div class="panel-detail">
-                    <table>
-                        <tr>
-                            <td><p>Shop</p></td>
-                            <td><p>{{ $shop->shop_name }}</p></td>
-                        </tr>
-                        <tr>
-                            <td><p>Date</p></td>
-                            <td><p id="displayDate"></p></td>
-                            <input type="hidden" name="hiddenDate" id="date">
-                        </tr>
-                        <tr>
-                            <td><p>Time</p></td>
-                            <td><p id="displayTime"></p></td>
-                            <input type="hidden" name="hiddenTime" id="time">
-                        </tr>
-                        <tr>
-                            <td><p>Number</p></td>
-                            <td><p id="displayNumpeople"></p></td>
-                            <input type="hidden" name="hiddenNumpeople" id="num_people">
-                        </tr>
-                    </table>
-                </div>
+                    <!-- 予約詳細の表示部分 -->
+                    <div class="panel-detail">
+                        <table>
+                            <tr>
+                                <td><p>Shop　　</p></td>
+                                <td><p>{{ $shop->shop_name }}</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Date　　</p></td>
+                                <td><p id="displayDate"></p></td>
+                                <input type="hidden" name="hiddenDate" id="date">
+                            </tr>
+                            <tr>
+                                <td><p>Time　　</p></td>
+                                <td><p id="displayTime"></p></td>
+                                <input type="hidden" name="hiddenTime" id="time">
+                            </tr>
+                            <tr>
+                                <td><p>Number　　</p></td>
+                                <td><p id="displayCount"></p></td>
+                                <input type="hidden" name="hiddenCount" id="count">
+                            </tr>
+                        </table>
+                    </div>
 
                     <button type="submit" class="submit">予約する</button>
             </form>
@@ -111,9 +119,10 @@
         document.getElementById('displayTime').innerText = this.value;
     });
 
-    document.getElementById('num_people').addEventListener('input', function () {
-        document.getElementById('displayNumpeople').innerText = this.value + ' 人';
+    document.getElementById('count').addEventListener('input', function () {
+        document.getElementById('displayCount').innerText = this.value + ' 人';
     });
 </script>
+
 
 @endsection

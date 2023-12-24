@@ -16,6 +16,7 @@ class CreateReservationsTable extends Migration
         Schema::create('reservations', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('shop_id');
             $table->date('date');
             $table->time('time');
             $table->integer('count'); // 人数
@@ -23,6 +24,8 @@ class CreateReservationsTable extends Migration
 
             // 外部キー制約
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('shop_id')->references('id')->on('shops')->onDelete('cascade');
+
         });
     }
     

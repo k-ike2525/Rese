@@ -6,39 +6,39 @@
 <form class="form_wrap" method="POST" action="{{ route('register') }}">
 @csrf
                             <!--//名前//-->
-                                <div class="" >
-                                  <label for="password"><i class="fab fa-twitter"></i></label>
-                                  <input id="name" type="text" class="" name="name"  required autocomplete="name" placeholder="名前">
-                                </div>
-                                <div class="form__error">
-            @error('name')
-            {{ $message }}
-            @enderror
-                                </div>
+                            <div class="" >
+                                <label for="password"><i class="fab fa-twitter"></i></label>
+                                <input id="name" type="text" class="" name="name"  required autocomplete="name" placeholder="Name">
+                            </div>
+                            <div class="form__error">
+        @error('name')
+        {{ $message }}
+        @enderror
+                            </div>
 
                             <!--//メールアドレス//-->
-                                <div class="" >
-                                                    <label for="password"><i class="fab fa-twitter"></i></label>
-                                  <input id="email" type="email" class="" name="email"  required autocomplete="email" placeholder="メールアドレス">
-                                </div>
-                                <div class="form__error">
-            @error('email')
-            {{ $message }}
-            @enderror
-                                </div>
+                            <div class="" >
+                                <label for="password"><i class="fa-solid fa-square-envelope"></i></label>
+                                <input id="email" type="email" class="" name="email"  required autocomplete="email" placeholder="Email">
+                            </div>
+                            <div class="form__error">
+        @error('email')
+        {{ $message }}
+        @enderror
+                            </div>
 
                             <!---//パスワード//--->
-                                <div class="" >
-                                                    <label for="password"><i class="fab fa-twitter"></i></label>
-                                <input id="password" type="password" class="" name="password" required autocomplete="new-password" placeholder="パスワード">
-                                </div>
-                                <div class="form__error">
-            @error('password')
-            {{ $message }}
-            @enderror
-                                </div>
+                            <div class="" >
+                                <label for="password"><i class="fa-solid fa-square-pen"></i></label>
+                                <input id="password" type="password" class="" name="password" required autocomplete="new-password" placeholder="Password">
+                            </div>
+                            <div class="form__error">
+        @error('password')
+        {{ $message }}
+        @enderror
+                            </div>
 
-                                <div class="" >
+                            <div class="" >
                                 <button type="submit" class="submit">
                                     {{ __('登録') }}
                                 </button>
