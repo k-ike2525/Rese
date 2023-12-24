@@ -62,6 +62,7 @@ $ git clone git@github.com:k-ike2525/Rese.git </br>　
 $ mv Rese XXX 　 </br>
 「XXX」　は任意のディレクトリ名 </br>
 
+上記で変更したディレクトリ（変更しない場合「Rese」）をターミナルで開き　以下実行してください</br>
 docker 構築 </br>
 $ docker-compose up -d --build </br>
 補足：実行できない場合は、Rese/docker/mysqlのdataディレクトリの中身ファイルををすべて削除して再度実行してください。
