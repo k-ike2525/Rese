@@ -59,7 +59,7 @@
 開発環境を GitHub からクローン　 </br>
 $ cd XXX 　 </br>
 $ git clone git@github.com:k-ike2525/Rese.git </br>　
-$ mv Atte XXX 　 </br>
+$ mv Rese XXX 　 </br>
 「XXX」　は任意のディレクトリ名 </br>
 
 docker 構築 </br>
