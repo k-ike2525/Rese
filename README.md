@@ -55,6 +55,7 @@
 
 ## 環境構築
 
+注：以下　上から順にターミナルより　実行してください　</br>
 開発環境を GitHub からクローン　 </br>
 $ cd XXX 　 </br>
 $ git clone git@github.com:k-ike2525/Rese.git </br>　
