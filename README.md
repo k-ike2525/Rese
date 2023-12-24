@@ -75,7 +75,7 @@ Rese 各テーブル取得　</br>
 php artisan migrate
 
 laravel 各データをインストール </br>
-$ php artisan storage:link
+$ php artisan storage:link　</br>
 補足：src/public/storage に strage エイリアス ファイルの確認
 　　　 img ディレクトリ内の画像を読み込みます。
 
