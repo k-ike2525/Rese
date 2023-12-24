@@ -47,12 +47,11 @@
 ・php, javascript, html, css など </br>
 
 ## テーブル設計の画像
+<img width="419" alt="スクリーンショット 2023-12-25 0 20 08" src="https://github.com/k-ike2525/Rese/assets/137484536/6f4609d9-e055-43f0-a4ec-30d062207f20">
 
-テーブル設計
 
 ## ER 図
-
-ER 図
+<img width="917" alt="スクリーンショット 2023-12-24 23 39 33" src="https://github.com/k-ike2525/Rese/assets/137484536/5867d7b9-d208-4093-92fd-80acb06dbeb9">
 
 ## 環境構築
 
