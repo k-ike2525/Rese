@@ -13,7 +13,7 @@
 
 参照：</br>
 　　 DB : http://localhost:8080/ </br>
-トップ：http://localhost/" </br>
+トップ：http://localhost/ </br>
 
 ・注意事項</br>
 　　　お気に入り機能：お気に入りボタンの動作に少し時間差があります.オンオフが遅い場合は、キャッシュを消すか、ページ更新をしてみてください</br>
@@ -84,7 +84,7 @@ php artisan migrate </br>
 
 laravel 各データをインストール </br>
 $ php artisan storage:link　</br>
-補足：</br>
+補足：すでに保存されていた場合は次の工程を実行してください</br>
 src/public/storage に imgディレクトリ（画像５枚）また、　strage エイリアス ファイルの確認</br>
 img ディレクトリ内の画像を読み込みます。
 
